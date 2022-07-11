@@ -11,14 +11,19 @@ public class Employee_Wage {
     public static void main(String[] args) {
         System.out.println("Well come to Employee Wage computation");
         int checkRandom = (int) Math.floor(Math.random() * 10) % 3;
-        if (checkRandom == isPresent) {
-            System.out.println("Employee is present");
-            wage = wage_per_hour * full_day_hours;
-        } else if (checkRandom == isPartime_present) {
-            System.out.println("Employee is Part time Present");
-            wage = wage_per_hour * part_time_hours;
-        } else {
-            System.out.println("Employee is Absent");
+        switch (checkRandom) {
+            case 1:
+                System.out.println("Employee is present");
+                wage = wage_per_hour * full_day_hours;
+                break;
+            case 2:
+                System.out.println("Employee is part time present");
+                wage = wage_per_hour * part_time_hours;
+                break;
+            default:
+                System.out.println("Employee is absent");
+                break;
+
         }
         System.out.println("Daily Employee Wage: " + wage);
     }
